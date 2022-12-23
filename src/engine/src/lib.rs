@@ -28,7 +28,8 @@ pub mod nmkill {
             let path = entry.path();
             if path.is_dir() {
                 if path.file_name().unwrap() == "node_modules" {
-                    println!("{:?} {:?}", path.display(),get_folder_size(&path));
+                    // println!("{:?} {:?}", path.display(),get_folder_size(&path));
+                    println!("{:?}", path.display());
                     node_modules.push(path);
                 } else {
                     node_modules.append(&mut find_node_modules(&path, depth + 1));

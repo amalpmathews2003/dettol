@@ -38,8 +38,9 @@ export const Counter = () => {
   let max = items?.length || 0;
 
   useEffect(() => {
-    find_node_modules(setItems, __dirname).then((paths) => {
+    find_node_modules(setItems, process.cwd()).then((paths) => {
       setItems(paths);
+
       setDeleteList((prev) => {
         const temp = [...prev];
         for (let i = temp.length; i < items.length; i++) {
@@ -66,6 +67,7 @@ export const Counter = () => {
         temp[onFocus] = DeleteStatus.deleting;
         return temp;
       })
+      if(deleteList[onFocus] == DeleteStatus.deleted) return;
       delete_node_module(items[onFocus]).then(() => {
         setDeleteList((prev) => {
           const temp = [...prev];

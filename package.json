@@ -1,11 +1,11 @@
 {
   "name": "dettol",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Delete unwanted node_modules from your pc",
   "scripts": {
     "build:engine": "cd src/engine && cargo build --release",
     "run:engine": "cd src/engine && cargo run",
-    "dev": "ts-node src/terminal.tsx",
+    "dev": "ts-node src/index.tsx",
     "build": "tsc -p tsconfig.json",
     "start": "node lib/index.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -21,6 +21,9 @@
     "url": "https://github.com/amalpmathews2003/dettol/issues"
   },
   "homepage": "https://github.com/amalpmathews2003/dettol#readme",
+  "bin": {
+    "dettol": "bin/index.js"
+  },
   "files": [
     "lib/**/*"
   ],
