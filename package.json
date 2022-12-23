@@ -1,0 +1,47 @@
+{
+  "name": "dettol",
+  "version": "0.9.0",
+  "description": "Delete unwanted node_modules from your pc",
+  "scripts": {
+    "build:engine": "cd src/engine && cargo build --release",
+    "run:engine": "cd src/engine && cargo run",
+    "dev": "ts-node src/terminal.tsx",
+    "build": "tsc -p tsconfig.json",
+    "start": "node lib/index.js",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "author": "Amal P Mathews",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amalpmathews2003/domex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amalpmathews2003/domex/issues"
+  },
+  "homepage": "https://github.com/amalpmathews2003/domex#readme",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "npm",
+    "clean",
+    "npkill",
+    "domex"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@types/react": "^18.0.26",
+    "@types/terminal-kit": "^2.5.1",
+    "prettier": "^2.8.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "ink": "^3.2.0",
+    "ink-spinner": "^4.0.3",
+    "react": "^17.0.2"
+  }
+}
