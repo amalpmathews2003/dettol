@@ -1,6 +1,6 @@
 {
   "name": "dettol",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Delete unwanted node_modules from your pc",
   "scripts": {
     "build:engine": "cd src/engine && cargo build --release",
